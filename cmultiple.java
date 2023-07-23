@@ -19,7 +19,7 @@ public class cmultiple{
             }           
         } catch (Exception e) {
             // TODO: handle exception
-            System.out.println("Please give the input as integers only.");
+            System.err.println("Please give the input as integers only.");
         }
         
 
@@ -36,6 +36,8 @@ public class cmultiple{
 
 
         //code to print the updated array
+
+        System.out.println(" ");
         for(int k = 0; k<arr.length;k++){
             System.out.println(arr[k]);
         }
