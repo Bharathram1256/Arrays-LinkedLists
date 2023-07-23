@@ -29,6 +29,27 @@ public class deleteDuplicate {
         }
     }
 
+    
+    public void deleteDuplicates() {
+    if (this.head == null) {
+        System.out.println("Linked list is empty.");
+        return;
+    }
+
+    Node current = this.head;
+    while (current != null) {
+        Node runner = current;
+        while (runner.next != null) {
+            if (runner.next.item == current.item) {
+                runner.next = runner.next.next;
+            } else {
+                runner = runner.next;
+            }
+        }
+        current = current.next;
+    }
+}
+
 
     public void display() {
         Node current = this.head;
@@ -55,9 +76,12 @@ public class deleteDuplicate {
         System.out.println("Linked list before removing duplicates:");
         llist.display();
 
-       
+        // Remove duplicates
+        llist.deleteDuplicates();
+
+        System.out.println("Linked list after removing duplicates:");
+        llist.display();
 
         scanner.close();
     }
 }
-
