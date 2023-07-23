@@ -27,7 +27,7 @@ public class cmultiple{
         // for(int i = 0;i<arr.length;i++){
         //     System.out.println(arr[i]);
         // }
-        sc.close();
+        // sc.close();
 
         //code to calculate cumulative multiple at each index.
         for(int j = 1;j<arr.length;j++){
@@ -37,7 +37,7 @@ public class cmultiple{
 
         //code to print the updated array
         for(int k = 0; k<arr.length;k++){
-            System.out.println();
+            System.out.println(arr[k]);
         }
     }
 }
