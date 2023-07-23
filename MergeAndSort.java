@@ -14,38 +14,30 @@ public class MergeAndSort {
     public static ListNode createLL(Scanner scanner) {
         System.out.print("Enter the number of elements in the linked list: ");
         int n = scanner.nextInt();
-    
+
         if (n < 0) {
-            System.out.println("Invalid input. Please enter a non-negative integer.");
+            System.err.println("Invalid input. Please enter a non-negative integer.");
             return null;
         }
-    
+
         try {
             ListNode dummy = new ListNode(0);
             ListNode current = dummy;
-    
+
             System.out.println("Enter the elements of the linked list:");
             for (int i = 0; i < n; i++) {
-                if (!scanner.hasNextInt()) {
-                    System.err.println("Invalid input. Please enter integers only.");
-                    return null;
-                }
                 int val = scanner.nextInt();
                 current.next = new ListNode(val);
                 current = current.next;
             }
-            if (scanner.hasNext()) {
-                System.err.println("Invalid input. Please enter exactly " + n + " integers.");
-                return null;
-            }
-    
+
             return dummy.next;
         } catch (Exception e) {
             System.err.println("Invalid input. Please enter integers only.");
             return null;
         }
     }
-    
+
     // for printing the linked list
     public static void printLL(ListNode head) {
         ListNode current = head;
