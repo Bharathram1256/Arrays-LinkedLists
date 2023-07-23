@@ -8,10 +8,9 @@ public class negetive {
     Scanner sc = new Scanner(System.in);
     int a = sc.nextInt();
     List<Integer> list = new ArrayList<>();
-    while(a > 0){
-        a--;
-        list.add(sc.nextInt());
-    }
+    for(int i = 0; i < a; i++) {
+            list.add(sc.nextInt());
+        }
     int negetive = 0;
     for(int i = 0; i < list.size(); i++){
         int sum = 0;
