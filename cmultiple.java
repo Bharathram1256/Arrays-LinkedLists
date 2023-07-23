@@ -39,19 +39,5 @@ public class cmultiple{
         for(int k = 0; k<arr.length;k++){
             System.out.println();
         }
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
